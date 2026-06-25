@@ -22,7 +22,7 @@
     <form class="c-contact__form" action="">
       <label class="c-contact__label" for="first-name">First Name  <span class="c-contact__required" aria-hidden="true">*</span></label>
       <input 
-      class="c-contact__control" 
+      class="c-contact__input" 
       type="text" id="first-name" 
       name="first-name" 
       autocomplete="given-name" 
@@ -32,7 +32,7 @@
 
       <label class="c-contact__label" for="last-name">Last Name <span class="c-contact__required" aria-hidden="true">*</span></label>
       <input 
-      class="c-contact__control" 
+      class="c-contact__input" 
       type="text" 
       id="last-name" 
       name="last-name" 
@@ -42,7 +42,7 @@
       <p class="c-contact__error" id="last-name-error" aria-live="polite">This field is required</p>
 
       <label class="c-contact__label" for="email">Email Address <span class="c-contact__required" aria-hidden="true">*</span></label>
-      <input class="c-contact__control" 
+      <input class="c-contact__input" 
       type="email" 
       id="email" 
       name="email" 
@@ -54,42 +54,53 @@
 
       <fieldset class="c-contact__fieldset">
         <legend class="c-contact__label">Query Type <span class="c-contact__required" aria-hidden="true">*</span></legend>
-        <input 
-        class="c-contact__control" 
-        type="radio" 
-        name="query" 
-        id="general-enquiry" 
-        value="general-enquiry" 
-        required aria-describedby="query-error">
-        <label for="general-enquiry">General Enquiry</label>
-        <input 
-        class="c-contact__control" 
-        type="radio" 
-        name="query" 
-        id="support-request" 
-        value="support-request" 
-        aria-describedby="query-error">
-        <label for="support-request">Support Request</label>
+            
+        <label class="c-contact__option">
+          <input 
+          class="c-contact__radio" 
+          type="radio" 
+          name="query" 
+          id="general-enquiry" 
+          value="general-enquiry" 
+          required aria-describedby="query-error">
+          
+          General Enquiry
+        </label>
+
+        <label class="c-contact__option">
+          <input 
+          class="c-contact__radio" 
+          type="radio" 
+          name="query" 
+          id="support-request" 
+          value="support-request" 
+          aria-describedby="query-error">
+
+          Support Request
+        </label>
         <p class="c-contact__error" id="query-error" aria-live="polite">Please select a query type</p>
       </fieldset>
 
       <label class="c-contact__label" for="message">Message <span class="c-contact__required" aria-hidden="true">*</span></label>
       <textarea 
-      class="c-contact__control c-contact__controls--textarea" 
+      class="c-contact__textarea" 
       name="Message" 
       id="message" 
       required 
       aria-describedby="message-error"></textarea>
       <p class="c-contact__error" id="message-error" aria-live="polite">This field is required</p>
 
-      <input 
-      class="c-contact__control" 
-      type="checkbox" 
-      name="contact-consent" 
-      id="contact-consent" 
-      required 
-      aria-describedby="contact-consent-error">
-      <label class="c-contact__label" for="contact-consent">I consent to being contacted by the team <span class="c-contact__required" aria-hidden="true">*</span></label>
+      <label class="c-contact__label">
+        <input  
+        class="c-contact__checkbox" 
+        type="checkbox" 
+        name="contact-consent" 
+        id="contact-consent" 
+        required 
+        aria-describedby="contact-consent-error">
+
+        I consent to being contacted by the team <span class="c-contact__required" aria-hidden="true">*</span>
+      </label>
       <p class="c-contact__error" id="contact-consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
       
       <button class="c-contact__submit" type="submit">Submit</button>
