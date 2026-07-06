@@ -20,7 +20,7 @@
   <main class="c-contact">
     <h1 class="c-contact__title">Contact Us</h1>
     <form class="c-contact__form" action="">
-      <label class="c-contact__label" for="first-name">First Name  <span class="c-contact__required" aria-hidden="true">*</span></label>
+      <label class="c-contact__label" for="first-name">First Name<span class="c-contact__required" aria-hidden="true">*</span></label>
       <input 
       class="c-contact__input" 
       type="text" id="first-name" 
@@ -30,7 +30,7 @@
       aria-describedby="first-name-error">
       <p class="c-contact__error" id="first-name-error" aria-live="polite">This field is required</p>
 
-      <label class="c-contact__label" for="last-name">Last Name <span class="c-contact__required" aria-hidden="true">*</span></label>
+      <label class="c-contact__label" for="last-name">Last Name<span class="c-contact__required" aria-hidden="true">*</span></label>
       <input 
       class="c-contact__input" 
       type="text" 
@@ -41,7 +41,7 @@
       aria-describedby="last-name-error">
       <p class="c-contact__error" id="last-name-error" aria-live="polite">This field is required</p>
 
-      <label class="c-contact__label" for="email">Email Address <span class="c-contact__required" aria-hidden="true">*</span></label>
+      <label class="c-contact__label" for="email">Email Address<span class="c-contact__required" aria-hidden="true">*</span></label>
       <input class="c-contact__input" 
       type="email" 
       id="email" 
@@ -53,7 +53,7 @@
       <p class="c-contact__error" id="email-required-error" aria-live="polite">This field is required</p>
 
       <fieldset class="c-contact__fieldset">
-        <legend class="c-contact__label">Query Type <span class="c-contact__required" aria-hidden="true">*</span></legend>
+        <legend class="c-contact__label">Query Type<span class="c-contact__required" aria-hidden="true">*</span></legend>
             
         <label class="c-contact__option">
           <input 
@@ -81,7 +81,7 @@
         <p class="c-contact__error" id="query-error" aria-live="polite">Please select a query type</p>
       </fieldset>
 
-      <label class="c-contact__label" for="message">Message <span class="c-contact__required" aria-hidden="true">*</span></label>
+      <label class="c-contact__label" for="message">Message<span class="c-contact__required" aria-hidden="true">*</span></label>
       <textarea 
       class="c-contact__textarea" 
       name="Message" 
@@ -90,7 +90,7 @@
       aria-describedby="message-error"></textarea>
       <p class="c-contact__error" id="message-error" aria-live="polite">This field is required</p>
 
-      <label class="c-contact__label">
+      <label class="c-contact__label u-flex">
         <input  
         class="c-contact__checkbox" 
         type="checkbox" 
@@ -99,7 +99,9 @@
         required 
         aria-describedby="contact-consent-error">
 
-        I consent to being contacted by the team <span class="c-contact__required" aria-hidden="true">*</span>
+        <span>
+          I consent to being contacted by the team<span class="c-contact__required" aria-hidden="true">*</span>
+        </span>
       </label>
       <p class="c-contact__error" id="contact-consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
       
