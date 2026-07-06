@@ -28,3 +28,10 @@
         height: 7rem;
     }
 }
+
+@media (forced-colors: active) {
+    .c-contact__radio, .c-contact__checkbox {
+      appearance: auto;
+      -webkit-appearance: auto;
+    } 
+}
