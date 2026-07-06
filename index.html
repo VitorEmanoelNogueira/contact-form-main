@@ -14,43 +14,50 @@
 
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/media-queries.css">
 </head>
 <body>
 
   <main class="c-contact">
     <h1 class="c-contact__title">Contact Us</h1>
     <form class="c-contact__form" action="">
-      <label class="c-contact__label" for="first-name">First Name<span class="c-contact__required" aria-hidden="true">*</span></label>
-      <input 
-      class="c-contact__input" 
-      type="text" id="first-name" 
-      name="first-name" 
-      autocomplete="given-name" 
-      required 
-      aria-describedby="first-name-error">
-      <p class="c-contact__error" id="first-name-error" aria-live="polite">This field is required</p>
+      <div class="c-contact__field">
+        <label class="c-contact__label" for="first-name">First Name<span class="c-contact__required" aria-hidden="true">*</span></label>
+        <input
+        class="c-contact__input"
+        type="text" id="first-name"
+        name="first-name"
+        autocomplete="given-name"
+        required
+        aria-describedby="first-name-error">
+        <p class="c-contact__error" id="first-name-error" aria-live="polite">This field is required</p>
+      </div>
 
-      <label class="c-contact__label" for="last-name">Last Name<span class="c-contact__required" aria-hidden="true">*</span></label>
-      <input 
-      class="c-contact__input" 
-      type="text" 
-      id="last-name" 
-      name="last-name" 
-      autocomplete="family-name" 
-      required 
-      aria-describedby="last-name-error">
+      <div class="c-contact__field">
+        <label class="c-contact__label" for="last-name">Last Name<span class="c-contact__required" aria-hidden="true">*</span></label>
+        <input
+        class="c-contact__input"
+        type="text"
+        id="last-name"
+        name="last-name"
+        autocomplete="family-name"
+        required
+        aria-describedby="last-name-error">
+      </div>
       <p class="c-contact__error" id="last-name-error" aria-live="polite">This field is required</p>
 
-      <label class="c-contact__label" for="email">Email Address<span class="c-contact__required" aria-hidden="true">*</span></label>
-      <input class="c-contact__input" 
-      type="email" 
-      id="email" 
-      name="email" 
-      autocomplete="email" 
-      required 
-      aria-describedby="email-format-error email-required-error">
-      <p class="c-contact__error" id="email-format-error" aria-live="polite">Please enter a valid email address</p>
-      <p class="c-contact__error" id="email-required-error" aria-live="polite">This field is required</p>
+      <div class="c-contact__field c-contact__field--full">
+        <label class="c-contact__label" for="email">Email Address<span class="c-contact__required" aria-hidden="true">*</span></label>
+        <input class="c-contact__input"
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+        aria-describedby="email-format-error email-required-error">
+        <p class="c-contact__error" id="email-format-error" aria-live="polite">Please enter a valid email address</p>
+        <p class="c-contact__error" id="email-required-error" aria-live="polite">This field is required</p>
+      </div>
 
       <fieldset class="c-contact__fieldset">
         <legend class="c-contact__label">Query Type<span class="c-contact__required" aria-hidden="true">*</span></legend>
@@ -81,29 +88,32 @@
         <p class="c-contact__error" id="query-error" aria-live="polite">Please select a query type</p>
       </fieldset>
 
-      <label class="c-contact__label" for="message">Message<span class="c-contact__required" aria-hidden="true">*</span></label>
-      <textarea 
-      class="c-contact__textarea" 
-      name="Message" 
-      id="message" 
-      required 
-      aria-describedby="message-error"></textarea>
-      <p class="c-contact__error" id="message-error" aria-live="polite">This field is required</p>
+      <div class="c-contact__field c-contact__field--full">
+        <label class="c-contact__label" for="message">Message<span class="c-contact__required" aria-hidden="true">*</span></label>
+        <textarea
+        class="c-contact__textarea"
+        name="Message"
+        id="message"
+        required
+        aria-describedby="message-error"></textarea>
+        <p class="c-contact__error" id="message-error" aria-live="polite">This field is required</p>
+      </div>
 
-      <label class="c-contact__label u-flex">
-        <input  
-        class="c-contact__checkbox" 
-        type="checkbox" 
-        name="contact-consent" 
-        id="contact-consent" 
-        required 
-        aria-describedby="contact-consent-error">
-
-        <span>
-          I consent to being contacted by the team<span class="c-contact__required" aria-hidden="true">*</span>
-        </span>
-      </label>
-      <p class="c-contact__error" id="contact-consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
+      <div class="c-contact__field c-contact__field--full">
+        <label class="c-contact__label u-flex">
+          <input
+          class="c-contact__checkbox"
+          type="checkbox"
+          name="contact-consent"
+          id="contact-consent"
+          required
+          aria-describedby="contact-consent-error">
+          <span>
+            I consent to being contacted by the team<span class="c-contact__required" aria-hidden="true">*</span>
+          </span>
+        </label>
+        <p class="c-contact__error" id="contact-consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
+      </div>
       
       <button class="c-contact__submit" type="submit">Submit</button>
     </form>

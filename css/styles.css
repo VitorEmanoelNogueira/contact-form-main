@@ -18,7 +18,6 @@ body{
     min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
     padding-inline: 1rem;
     padding-block-start: 2rem;
     font: normal 1rem/1.5 "Karla", sans-serif;
@@ -32,6 +31,10 @@ body{
     background-color: var(--white);
     padding-inline: 1.5em;
     border-radius: 1rem;
+}
+
+.c-contact__field{
+    margin-block-end: 1.5em;
 }
 
 .c-contact__title{
@@ -51,7 +54,6 @@ body{
 .c-contact__input, .c-contact__option, .c-contact__textarea{
     border: 0.1em solid var(--grey500);
     border-radius: 0.5em;
-    margin-block-end: 1.5em;
 }
 
 .c-contact__input:focus, .c-contact__option:focus, .c-contact__textarea:focus{
@@ -63,7 +65,8 @@ body{
 }
 
 .c-contact__input, .c-contact__textarea{
-    width: 100%
+    width: 100%;
+    padding-inline: 0.5em;
 }
 
 .c-contact__error{
@@ -74,7 +77,10 @@ body{
     border: none;
     padding: 0;
     margin-block-end: 0.5em;
-    
+}
+
+.c-contact__fieldset > .c-contact__label{
+    margin-block-end: 1em;
 }
 
 .c-contact__option{
@@ -108,14 +114,15 @@ body{
 
 
 .c-contact__textarea{
-    height: 15em;
+    height: 15rem;
+    padding-block: 0.5em;
     resize: vertical;
 }
 
 .c-contact__checkbox{
     appearance: none;
     -webkit-appearance: none;
-    width: 1.356rem;
+    width: 1.15rem;
     height: 1.15rem;
     margin-inline-end: 1rem;
     border: 0.1rem solid var(--grey500);
@@ -133,7 +140,7 @@ body{
     padding-block: 1em;
     border: none;
     border-radius: 0.5em;
-    margin-block: 1.5em;
+    margin-block-end: 1.5em;
     background-color: var(--green600);
     color: var(--white);
     font-weight: 700;
