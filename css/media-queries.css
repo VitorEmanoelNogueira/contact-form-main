@@ -1,4 +1,4 @@
-@media screen and (min-width: 37.5rem){
+@media screen and (min-width: 48rem){
     body{
         align-items: center;
     }
@@ -38,4 +38,14 @@
       appearance: auto;
       -webkit-appearance: auto;
     } 
+
+    .c-contact__submit, .c-contact__success{
+        border: 0.1rem solid currentColor;
+    }
+}
+
+@media (prefers-reduced-motion: reduce){
+    .c-contact__success{
+        transition: none;
+    }
 }
