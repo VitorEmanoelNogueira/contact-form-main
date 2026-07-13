@@ -76,7 +76,6 @@ body{
 }
 
 .c-contact__error{
-    display: none;
     margin-block: 0.5em 0;
     color: var(--error);
 }
@@ -171,7 +170,7 @@ body{
     cursor: pointer;
 }
 
-.c-contact__submit:hover{
+.c-contact__submit:hover, .c-contact__submit:focus-visible{
     background-color: var(--green900);
 }
 
@@ -183,19 +182,27 @@ body{
     background-color: var(--grey900);
     color: var(--white);
     border-radius: 0.5em;
-
+    
     position: fixed;
     inset-block-start: 1.5rem;
     inset-inline: 0;
     inline-size: fit-content;
     max-inline-size: calc(100vw - 2.75rem);
     margin-inline: auto;
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+
+    transition: 
+        opacity 0.4s ease, 
+        transform 0.4s ease;
 }
 
 .c-contact__success-heading{
     display: flex;
     align-items: center;
     margin-block: 0;
+    font-weight: 700;
 }
 
 .c-contact__success-heading::before{
@@ -212,7 +219,7 @@ body{
 }
 
 
-/* Utilitaries */
+/* Utilities */
 .u-flex{
     display: flex;
     align-items: center;
@@ -227,6 +234,13 @@ body{
     border-color: var(--error); 
     box-shadow: 0 0 0.2rem var(--error);
 }
+
+.c-contact__success.is-visible{
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
 
 
 /* Frontendmentor attribution */
