@@ -75,7 +75,7 @@ Object.values(fields).forEach(field => {
         field.controls.forEach(control => control.addEventListener(field.validateOn, () => validateField(field)));
     } else{
             field.input.addEventListener(field.validateOn, () => {
-                if (!field.touched) return;
+                if ("touched" in field && !field.touched) return;
                 validateField(field);
             })
     }
