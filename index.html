@@ -15,12 +15,13 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/media-queries.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
 
   <main class="c-contact">
     <h1 class="c-contact__title">Contact Us</h1>
-    <form class="c-contact__form" action="">
+    <form class="c-contact__form" novalidate>
       <div class="c-contact__field">
         <label class="c-contact__label" for="first-name">First Name<span class="c-contact__required" aria-hidden="true">*</span></label>
         <input
@@ -29,8 +30,8 @@
         name="first-name"
         autocomplete="given-name"
         required
-        aria-describedby="first-name-error">
-        <p class="c-contact__error" id="first-name-error" aria-live="polite">This field is required</p>
+        >
+        <p class="c-contact__error" id="first-name-error" aria-live="polite" hidden>This field is required</p>
       </div>
 
       <div class="c-contact__field">
@@ -42,8 +43,8 @@
         name="last-name"
         autocomplete="family-name"
         required
-        aria-describedby="last-name-error">
-        <p class="c-contact__error" id="last-name-error" aria-live="polite">This field is required</p>
+        >
+        <p class="c-contact__error" id="last-name-error" aria-live="polite" hidden>This field is required</p>
       </div>
 
       <div class="c-contact__field c-contact__field--full">
@@ -53,10 +54,11 @@
         id="email"
         name="email"
         autocomplete="email"
+        pattern="^[a-zA-Z0-9]+([\.\+-_]+[a-zA-Z0-9]+)*@([a-zA-Z0-9]+(-+[a-zA-Z0-9]+)*\.)+[a-zA-Z]{2,}$"
         required
-        aria-describedby="email-format-error email-required-error">
-        <p class="c-contact__error" id="email-format-error" aria-live="polite">Please enter a valid email address</p>
-        <p class="c-contact__error" id="email-required-error" aria-live="polite">This field is required</p>
+        >
+        <p class="c-contact__error" id="email-format-error" aria-live="polite" hidden>Please enter a valid email address</p>
+        <p class="c-contact__error" id="email-required-error" aria-live="polite" hidden>This field is required</p>
       </div>
 
       <fieldset class="c-contact__fieldset">
@@ -69,7 +71,7 @@
           name="query" 
           id="general-enquiry" 
           value="general-enquiry" 
-          required aria-describedby="query-error">
+          required>
           
           General Enquiry
         </label>
@@ -81,11 +83,11 @@
           name="query" 
           id="support-request" 
           value="support-request" 
-          aria-describedby="query-error">
+          >
 
           Support Request
         </label>
-        <p class="c-contact__error" id="query-error" aria-live="polite">Please select a query type</p>
+        <p class="c-contact__error" id="query-error" aria-live="polite" hidden>Please select a query type</p>
       </fieldset>
 
       <div class="c-contact__field c-contact__field--full">
@@ -95,8 +97,8 @@
         name="Message"
         id="message"
         required
-        aria-describedby="message-error"></textarea>
-        <p class="c-contact__error" id="message-error" aria-live="polite">This field is required</p>
+        ></textarea>
+        <p class="c-contact__error" id="message-error" aria-live="polite" hidden>This field is required</p>
       </div>
 
       <div class="c-contact__field c-contact__field--full">
@@ -107,20 +109,20 @@
           name="contact-consent"
           id="contact-consent"
           required
-          aria-describedby="contact-consent-error">
+          >
           <span>
             I consent to being contacted by the team<span class="c-contact__required" aria-hidden="true">*</span>
           </span>
         </label>
-        <p class="c-contact__error" id="contact-consent-error" aria-live="polite">To submit this form, please consent to being contacted</p>
+        <p class="c-contact__error" id="contact-consent-error" aria-live="polite" hidden>To submit this form, please consent to being contacted</p>
       </div>
       
       <button class="c-contact__submit" type="submit">Submit</button>
     </form>
     
       <div class="c-contact__success" role="status" aria-live="polite">
-        <p class="c-contact__success-heading"><strong>Message Sent!</strong></p>
-        <p class="c-contact__success-text">Thanks for completing the form. We'll be in touch soon!</p>
+        <p class="c-contact__success-heading"></p>
+        <p class="c-contact__success-text"></p>
       </div>
   </main>
   
