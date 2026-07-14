@@ -165,7 +165,7 @@ function clearFieldError(field){
 function showSuccessMessage(){
     successToast.container.classList.add('is-visible');
     
-    successToast.title.innerHTML = "Message Sent!";
+    successToast.title.textContent = "Message Sent!";
     successToast.message.textContent =
     "Thanks for completing the form. We'll be in touch soon!";
 }
